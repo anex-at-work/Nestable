@@ -3,6 +3,10 @@
 Nestable
 ========
 
+# README FIRST
+
+This repo is a fork of [Nestable](https://github.com/RamonSmit/Nestable) by [RamonSmit](https://github.com/RamonSmit). CSS was fixed.
+
 ## We are writing a new readme! Till now, please continue read the source ;)
 
 ## PLEASE NOTE
@@ -76,13 +80,13 @@ $('.dd').nestable({
 This callback can be used to manipulate element which is being dragged as well as whole list.
 For example you can conditionally add `.dd-nochildren` to forbid dropping current element to
 some other elements for instance based on `data-type` of current element and other elements:
- 
+
  ```js
  $('.dd').nestable({
      onDragStart: function (l, e) {
          // get type of dragged element
          var type = $(e).data('type');
-         
+
          // based on type of dragged element add or remove no children class
          switch (type) {
              case 'type1':

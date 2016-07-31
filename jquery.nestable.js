@@ -538,6 +538,8 @@
                 else {
                     this.el.trigger('lostItem');
                 }
+                this.el.trigger('change');
+                el.trigger('change');
                 this.dragRootEl.trigger('gainedItem');
             }
             else {

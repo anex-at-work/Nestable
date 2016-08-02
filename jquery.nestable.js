@@ -531,6 +531,8 @@
             el[0].parentNode.removeChild(el[0]);
             this.placeEl.replaceWith(el);
 
+            this.el.trigger('change');
+            el.trigger('change');
             if(this.hasNewRoot) {
                 if(this.options.fixed === true) {
                     this.restoreItemAtIndex(el);
@@ -538,8 +540,6 @@
                 else {
                     this.el.trigger('lostItem');
                 }
-                this.el.trigger('change');
-                el.trigger('change');
                 this.dragRootEl.trigger('gainedItem');
             }
             else {
